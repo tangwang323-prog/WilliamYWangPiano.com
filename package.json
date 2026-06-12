@@ -1,0 +1,24 @@
+{
+  "name": "william-yucheng-wang-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Installable portfolio app for William Yucheng Wang.",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "cap:init": "npx cap init \"William Yucheng Wang\" com.williamyuchengwang.app --web-dir=dist",
+    "cap:add:android": "npx cap add android",
+    "cap:add:ios": "npx cap add ios",
+    "cap:sync": "npx cap sync"
+  },
+  "dependencies": {
+    "@capacitor/android": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/ios": "latest"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest",
+    "vite": "latest"
+  }
+}

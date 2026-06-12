@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0a08" />
+  <title>William Yucheng Wang App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="site" id="app">
+    <section id="home" class="screenshot-section"><img src="assets/home.jpg" alt="William Yucheng Wang home page with grand piano"></section>
+    <section id="work" class="screenshot-section"><img src="assets/work.jpg" alt="World of William Yucheng Wang section"></section>
+    <section id="quote" class="screenshot-section"><img src="assets/quote.jpg" alt="Music quote section"></section>
+
+    <section id="compositions" class="compositions-app" aria-labelledby="composition-title">
+      <header class="comp-topbar">
+        <div class="brand-mark" aria-hidden="true"><span></span></div>
+        <nav aria-label="Composition section navigation">
+          <a href="#home">Home</a>
+          <a class="active" href="#compositions">Compositions</a>
+          <a href="#awards">Awards</a>
+          <a href="#biography">Biographies</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <div class="comp-hero">
+        <p class="eyebrow">Works</p>
+        <h1 id="composition-title">Compositions</h1>
+      </div>
+
+      <div class="tabs visible-tabs" aria-label="Composition categories">
+        <a class="tab active" href="#original-panel"><span class="tab-icon">♫</span> Original Compositions <span class="count">5</span></a>
+        <a class="tab" href="#remix-panel"><span class="tab-icon">♬</span> Remixes &amp; Reimaginings <span class="count">6</span></a>
+      </div>
+
+      <div class="panel active always-visible" id="original-panel" data-panel="original">
+        <p class="intro">Original works spanning solo piano, chamber music, and orchestral writing — each piece a distinct chapter in an evolving artistic voice.</p>
+        <div class="composition-list" data-list="original"></div>
+      </div>
+
+      <div class="panel active always-visible remix-section" id="remix-panel" data-panel="remix">
+        <div class="section-heading-row">
+          <p class="eyebrow">Reimagined Works</p>
+          <h2>Remixes &amp; Reimaginings</h2>
+        </div>
+        <p class="intro">Reimaginings and reharmonizations of beloved works from the video, filtered through a contemporary sensibility.</p>
+        <div class="composition-list" data-list="remix"></div>
+      </div>
+
+      <footer class="comp-footer">
+        <div>
+          <h2>William Yucheng Wang</h2>
+          <p>Pianist &amp; Composer</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="#compositions">Compositions</a>
+          <a href="#awards">Awards</a>
+          <a href="#biography">Biographies</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <small>© 2026 William Yucheng Wang. All rights reserved.</small>
+        <span class="phone">+1 (689) 284-9000</span>
+      </footer>
+    </section>
+
+    <section id="awards" class="screenshot-section"><img src="assets/awards.jpg" alt="Awards and honours page"></section>
+    <section id="biography" class="screenshot-section"><img src="assets/biography.jpg" alt="Biography page"></section>
+    <section id="contact" class="screenshot-section"><img src="assets/contact.jpg" alt="Contact page"></section>
+  </main>
+
+  <div class="zoom-overlay" aria-hidden="true"><button class="zoom-close" type="button">Close</button><img alt="Expanded slide view" /></div>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+    }
+  </script>
+</body>
+</html>
