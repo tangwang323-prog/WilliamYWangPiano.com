@@ -1,8 +1,6 @@
 {
-  "appId": "com.williamyuchengwang.app",
+  "appId": "com.williamyuchengwang.slides",
   "appName": "William Yucheng Wang",
-  "webDir": "dist",
-  "server": {
-    "androidScheme": "https"
-  }
+  "webDir": ".",
+  "server": { "androidScheme": "https" }
 }
